@@ -1,11 +1,10 @@
 package main
 
 import (
-	intraday "api-playground/time_series"
+	autocomplete "api-playground/seekingAlpha"
 )
 
 func main() {
 
-	intraday.Get("AAPL")
-	//autocomplete.Get("TESLA")
+	autocomplete.Get("TESLA")
 }

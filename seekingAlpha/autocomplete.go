@@ -24,7 +24,7 @@ type Response struct {
 }
 
 type Symbol struct {
-	Id      string `json:"id"`
+	Id      int    `json:"id"`
 	Name    string `json:"name"`
 	Slug    string `json:"slug"`
 	Content string `json:"content"`
@@ -43,7 +43,7 @@ func initialiseHeaders() {
 	headerValue2 = "764ab462cbmshaff14dc3297e656p1c769fjsnfc5cc00b176f"
 }
 
-func Get(query string) {
+func Get(query string) Response {
 
 	querymod := strings.Replace(query, " ", "%20", -1)
 
@@ -66,10 +66,14 @@ func Get(query string) {
 		log.Fatal(err)
 	}
 
-	fmt.Println(res)
-	fmt.Println(string(body))
+	//fmt.Println(res)
+	//fmt.Println(string(body))
 
 	var responseObject Response
 	json.Unmarshal(body, &responseObject)
+	data, _ := json.Marshal(&responseObject)
+	fmt.Println(string(data))
+
+	return responseObject
 
 }

@@ -1,0 +1,40 @@
+table {
+    border-collapse: collapse;
+    width: 800px;
+    text-align: left;
+  }
+  
+  td, th {
+    border: 1px solid #999;
+    padding: 0.5rem;
+    text-align: left;
+  }
+
+  .blines:hover {
+    background-color: rgb(203, 223, 113);
+  }
+
+  .ticker {
+    text-align: left;
+    width: 100px;
+  }
+
+  .description {
+    text-align: left;
+    width: 600px;
+  }
+
+  .price {
+    text-align: left;
+    width: 100px;
+  }
+
+  input {
+    width: 400px; 
+    margin:25px;
+  }
+
+  button {
+    width: 200px; 
+    margin:25px;
+  }

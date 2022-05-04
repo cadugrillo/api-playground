@@ -1,20 +1,20 @@
-<div class="button">
+<div>
     <input placeholder="enter tickers separated by comma..." [(ngModel)]="tickers">
-    <button class="btn btn-primary" (click)="getTickerPrice()">Get Ticker Prices</button>  
+    <button class="btn btn-primary" (click)="getTickerPrice()">Get Stock Prices</button>  
 </div>
 <table class="table">
     <thead>
-    <tr>
-      <th>Ticker</th>
-      <th>Description</th>
-      <th>Price (US$)</th>
-    </tr>
+        <tr>
+            <th class="ticker">Ticker</th>
+            <th class="description">Description</th>
+            <th class="price">Price (US$)</th>
+        </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let ticker of response?.data">
-        <td>{{ticker.id}}</td>
-        <td>{{ticker.attributes.name}}</td>
-        <td>{{ticker.attributes.last}}</td>
-    </tr>
+        <tr class="blines" *ngFor="let ticker of response?.data">
+            <td class="ticker">{{ticker.id}}</td>
+            <td class="description">{{ticker.attributes.name}}</td>
+            <td class="price">{{ticker.attributes.last}}</td>
+        </tr>
     </tbody>
   </table>

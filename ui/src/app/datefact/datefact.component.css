@@ -1,0 +1,22 @@
+p {
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+.outer {
+    width:600px; 
+    border:1px solid #000;
+    border-radius: 25px;
+  }
+  
+  .inner{
+    background-color:#f0f0a0;
+    border:5px solid #000;
+    border-radius: 25px;
+    margin:25px;
+    padding:25px
+  }
+
+  .button{
+    margin-left:25px;
+  }

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { DatefactService, DateFact } from './datefact.service';
 
 @Component({
   selector: 'app-root',
@@ -8,17 +7,10 @@ import { DatefactService, DateFact } from './datefact.service';
 })
 export class AppComponent {
   title = 'ui';
-  dateFact!: DateFact;
-
-  constructor(private datefactService: DatefactService) { }
+  
+  constructor() { }
 
   ngOnInit() {
-    this.updateDateFact();
   }
 
-  updateDateFact() {
-  this.datefactService.getDateFact().subscribe((data) => {
-    this.dateFact = (data as DateFact);
-  });
-  }
 }

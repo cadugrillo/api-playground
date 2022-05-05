@@ -9,6 +9,7 @@ import { DatefactService } from './datefact.service';
 import { TickerpriceService } from './tickerprice.service';
 import { DatefactComponent } from './datefact/datefact.component';
 import { TickerpriceComponent } from './tickerprice/tickerprice.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TickerpriceComponent } from './tickerprice/tickerprice.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [DatefactService, TickerpriceService],
   bootstrap: [AppComponent]

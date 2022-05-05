@@ -7,6 +7,7 @@ p {
     width:600px; 
     border:1px solid #000;
     border-radius: 25px;
+    margin-left:25px;
   }
   
   .inner{
@@ -18,5 +19,7 @@ p {
   }
 
   .button{
-    margin-left:25px;
+    margin-left:275px;
+    margin-top:50px;
+    margin-bottom:25px;
   }

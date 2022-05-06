@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import {MatCardModule} from '@angular/material/card';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { TickerpriceComponent } from './tickerprice/tickerprice.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { WforecastService } from './wforecast.service';
 import { WforecastComponent } from './wforecast/wforecast.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { WforecastComponent } from './wforecast/wforecast.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule,
+    MatCardModule,
   ],
   providers: [DatefactService, TickerpriceService, WforecastService],
   bootstrap: [AppComponent]

@@ -72,7 +72,8 @@ class Condition {
 }
 
 class Wforecast {
-  forecast!: Forecastday;
+  //forecast!: Forecastday;
+  forecastday!: Fday[];
 }
 
 class Forecastday {

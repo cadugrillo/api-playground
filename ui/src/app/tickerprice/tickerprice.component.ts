@@ -17,13 +17,12 @@ export class TickerpriceComponent implements OnInit {
   ngOnInit(): void {
   }
 
-getTickerPrice() {
+  getTickerPrice() {
 
-  this.tickersMod = this.tickers.replace(/,/g,"%2C");
+    this.tickersMod = this.tickers.replace(/,/g,"%2C");
   
-  this.tickerpriceService.getTickerPrice(this.tickers).subscribe((data) => {
-    this.response = (data as Tickers);
-  });
-
-}
+    this.tickerpriceService.getTickerPrice(this.tickersMod).subscribe((data) => {
+      this.response = (data as Tickers);
+    });
+  }
 }

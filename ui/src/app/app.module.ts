@@ -10,12 +10,15 @@ import { TickerpriceService } from './tickerprice.service';
 import { DatefactComponent } from './datefact/datefact.component';
 import { TickerpriceComponent } from './tickerprice/tickerprice.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { WforecastService } from './wforecast.service';
+import { WforecastComponent } from './wforecast/wforecast.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DatefactComponent,
     TickerpriceComponent,
+    WforecastComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     NgbModule
   ],
-  providers: [DatefactService, TickerpriceService],
+  providers: [DatefactService, TickerpriceService, WforecastService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

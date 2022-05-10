@@ -20,20 +20,25 @@ export class TickerpriceService {
     return this.httpClient.get('https://seeking-alpha.p.rapidapi.com/market/get-realtime-prices?symbols='+tickers, this.httpOptions);
   }
 
+  getTickerValuation(ticker: string) {
+
+    return this.httpClient.get('https://seeking-alpha.p.rapidapi.com/symbols/get-valuation?symbols='+ticker, this.httpOptions);
+  }
+
 }
 
 export class Tickers {
-  data!: Ticker[]
+  data!: Ticker[];
 }
 
 class Ticker {
-  id!:        string;
-  type!:      string;
-  attributes!: Atributes
-  meta!:      Meta
+  id!:         string;
+  type!:       string;
+  attributes!: Attributes;
+  meta!:       Meta;
 }
 
-class Atributes {
+class Attributes {
   identifier!:                     string;
   name!:                           string;
   last!:                           number;
@@ -60,6 +65,38 @@ class Atributes {
   updated_at!:                     string;
 }
 
-export class Meta {
+class Meta {
 
+}
+
+export class Valuations {
+  data!: TickerVal[];
+}
+
+class TickerVal {
+  id!:         string;
+  type!:       string;
+  attributes!: ValAttributes;
+}
+
+class ValAttributes {
+  marketCap!: number;
+  totalEnterprise!: number;
+  lastClosePriceEarningsRatio!: number;
+  priceCf!: number;
+  priceSales!: number;
+  priceBook!: number;
+  priceTangb!: number;
+  evEbitda!: number;
+  evSales!: number;
+  evFcf!: number;
+  cShare!: number;
+  peRatioFwd!: number;
+  pegRatio!: number;
+  pegNongaapFy1!: number;
+  peGaapFy1!: number;
+  peNongaapFy1!: number;
+  peNongaap!: number;
+  evEbitdaFy1!: number;
+  evSalesFy1!: number;
 }

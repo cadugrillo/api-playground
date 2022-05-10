@@ -2,7 +2,8 @@
     <input placeholder="enter tickers separated by comma..." [(ngModel)]="tickers">
     <button class="btn btn-primary" (click)="getTickerPrice()">Get Stock Prices</button>  
 </div>
-<table class="table">
+<div>
+<table class="table" style="float: left">
     <thead>
         <tr>
             <th class="ticker">Ticker</th>
@@ -11,10 +12,62 @@
         </tr>
     </thead>
     <tbody>
-        <tr class="blines" *ngFor="let ticker of response?.data">
+        <tr class="blines" *ngFor="let ticker of response?.data" (click)="getTickerValuation(ticker.id)" >
             <td class="ticker">{{ticker.id}}</td>
             <td class="description">{{ticker.attributes.name}}</td>
             <td class="price">{{ticker.attributes.last}}</td>
         </tr>
     </tbody>
   </table>
+
+  <table class="tableValuation" style="float: left" *ngFor="let tickerVal of valuation?.data">
+    <thead>
+        <tr>
+            <th class="descriptionVal">Valuation Metrics for {{tickerVal.id}}</th>
+            <th class="priceVal">Numbers</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="descriptionVal">marketCap</td>
+            <td class="priceVal">{{tickerVal.attributes.marketCap}}</td>
+        </tr>
+        <tr>
+            <td class="descriptionVal">totalEnterprise</td>
+            <td class="priceVal">{{tickerVal.attributes.totalEnterprise}}</td>
+        </tr>
+        <tr>
+            <td class="descriptionVal">marketCap</td>
+            <td class="priceVal">{{tickerVal.attributes.marketCap}}</td>
+        </tr>
+        <tr>
+            <td class="descriptionVal">lastClosePriceEarningsRatio</td>
+            <td class="priceVal">{{tickerVal.attributes.lastClosePriceEarningsRatio}}</td>
+        </tr>
+        <tr>
+            <td class="descriptionVal">priceCf</td>
+            <td class="priceVal">{{tickerVal.attributes.priceCf}}</td>
+        </tr>
+        <tr>
+            <td class="descriptionVal">priceSales</td>
+            <td class="priceVal">{{tickerVal.attributes.priceSales}}</td>
+        </tr>
+        <tr>
+            <td class="descriptionVal">priceBook</td>
+            <td class="priceVal">{{tickerVal.attributes.priceBook}}</td>
+        </tr>
+        <tr>
+            <td class="descriptionVal">priceTangb</td>
+            <td class="priceVal">{{tickerVal.attributes.priceTangb}}</td>
+        </tr>
+        <tr>
+            <td class="descriptionVal">evEbitda</td>
+            <td class="priceVal">{{tickerVal.attributes.evEbitda}}</td>
+        </tr>
+        <tr>
+            <td class="descriptionVal">evSales</td>
+            <td class="priceVal">{{tickerVal.attributes.evSales}}</td>
+        </tr>
+    </tbody>
+  </table>
+</div>

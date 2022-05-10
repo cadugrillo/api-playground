@@ -4,6 +4,13 @@ table {
     text-align: left;
     margin-left:25px;
   }
+
+  .tableValuation {
+    border-collapse: collapse;
+    width: 430px;
+    text-align: left;
+    margin-left:25px;
+  }
   
   td, th {
     border: 1px solid #999;
@@ -27,7 +34,19 @@ table {
     padding: 15px;
   }
 
+  .descriptionVal {
+    text-align: left;
+    width: 300px;
+    padding: 15px;
+  }
+
   .price {
+    text-align: left;
+    width: 130px;
+    padding: 15px;
+  }
+
+  .priceVal {
     text-align: left;
     width: 130px;
     padding: 15px;

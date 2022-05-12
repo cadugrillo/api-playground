@@ -11,7 +11,7 @@ export class WforecastService {
   httpOptions = {
     headers: new HttpHeaders({
       "X-RapidAPI-Host": "weatherapi-com.p.rapidapi.com",
-		  "X-RapidAPI-Key": "764ab462cbmshaff14dc3297e656p1c769fjsnfc5cc00b176f"
+		  "X-RapidAPI-Key": "GET KEY AT RAPIDAPI.COM"
     })
   };
 
